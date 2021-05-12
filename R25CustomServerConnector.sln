@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R25CustomServerConnector", "R25CustomServerConnector.csproj", "{A051B01E-58AB-4F97-AF68-D593BC8C5B35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A051B01E-58AB-4F97-AF68-D593BC8C5B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A051B01E-58AB-4F97-AF68-D593BC8C5B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A051B01E-58AB-4F97-AF68-D593BC8C5B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A051B01E-58AB-4F97-AF68-D593BC8C5B35}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CCB1E09-3F5E-46EE-BA56-0E481A0FE08D}
+	EndGlobalSection
+EndGlobal

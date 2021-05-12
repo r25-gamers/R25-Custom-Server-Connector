@@ -1,0 +1,148 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	  <Version>1.0.0</Version>
+	  <Mappings>NuclearPowered/Mappings:0.4.0</Mappings>
+  </PropertyGroup>
+	
+  <PropertyGroup Condition="'$(GamePlatform)' == 'Steam'">
+      <GameVersion>2021.4.14s</GameVersion>
+      <DefineConstants>$(DefineConstants);STEAM</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GamePlatform)' == 'Itch'">
+      <GameVersion>2021.5.10i</GameVersion>
+      <DefineConstants>$(DefineConstants);ITCH</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Apple">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Apple.dll</HintPath>
+    </Reference>
+    <Reference Include="AppleCore">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\AppleCore.dll</HintPath>
+    </Reference>
+    <Reference Include="AppleMacos">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\AppleMacos.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="AssemblyUnhollower">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\AssemblyUnhollower.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Core">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\BepInEx.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.IL2CPP">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\BepInEx.IL2CPP.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader.Core">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\BepInEx.Preloader.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FacebookStore">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\FacebookStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Hazel">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Hazel.dll</HintPath>
+    </Reference>
+    <Reference Include="Iced">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\Iced.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cpp.TlsAdapter">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\Il2Cpp.TlsAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppDumper">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\Il2CppDumper.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Data">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Net.Http">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.Serialization">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml.Linq">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Il2CppSystem.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Purchasing.Common">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Purchasing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Windows">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Rewired_Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="SemVer">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\SemVer.dll</HintPath>
+    </Reference>
+    <Reference Include="Stores">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Stores.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerBaseLib">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerRuntimeLib">
+      <HintPath>Libs\BepInEx-6.0.0-reactor.18+structfix\BepInEx\core\UnhollowerRuntimeLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
